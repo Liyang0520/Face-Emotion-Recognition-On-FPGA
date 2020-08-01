@@ -8,7 +8,7 @@
 我们实现的基于Ultra96的人脸情感识别系统是一个实时的系统，可以有效进行边缘端的部署（系统框图1示）。首先，我们进行模型设计及训练，利用Keras设计了一个带有可分离卷积的模型进行人脸情感识别，其准确率在验证集上接近90%；然后，我们利用Vitis AI平台，对训得到的权重进行转化、量化和编译得到ELF文件。最后，我们在Ultra96-V2开发板上配置DPU-PYNQ环境，将ELF文件编译到shared library。系统识别的整体流程是OpenCV进行人脸检测，然后对检测到的人脸区域进行情感识别。
 
 ### 系统框图
-![work_framework.png](images/work_framework.png)
+![work_framework.png](https://github.com/Liyang0520/Face-Emotion-Recognition-On-FPGA/blob/master/images/work_framework.png)
 
 
 ## 系统设计
