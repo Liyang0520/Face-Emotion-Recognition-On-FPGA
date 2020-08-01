@@ -49,15 +49,15 @@ python ./network/train_fer_mobile.py
 cd vitis-AI
 ```
 
-权重转化命令
+运行权重转化脚本
 ```
 ./1_vitisAI_keras2frozon.sh
 ```
-量化命令
+运行量化脚本
 ```
 ./2_vitisAI_tf_quantize.sh
 ```
-编译命令
+运行编译脚本
 ```
 ./3_vitisAI_tf_compile.sh
 ```
@@ -67,12 +67,12 @@ cd vitis-AI
 
 ![](https://github.com/Liyang0520/Face-Emotion-Recognition-On-FPGA/blob/master/images/PYNQ.png)
 
-然后，将Vitis-AI生成的.elf文件再次通过ARM提供的GCC编译成DPU shared library的.so文件。转化命令为
+然后，将Vitis-AI生成的.elf文件再次通过ARM提供的GCC编译成DPU shared library的.so文件。首先进入"deployment"目录，运行转化脚本
 ```
-sudo ./deployment/1.compile.sh
+./1.compile.sh
 ```
 
-打开'dpu_FER.ipynb',我们可以运行得到结果。
+打开'dpuFer.ipynb',我们可以运行得到结果。
 
 ## 结果
 ### Ultra96验证集结果
